@@ -1,0 +1,16 @@
+.button {
+  background-color: #7190a6;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  color: #f6e7e6;
+  font-size: 1.3rem;
+}
+
+.tipButton {
+  background-color: #334167;
+}
+
+.actionButton {
+  background-color: #49b066;
+}
