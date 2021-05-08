@@ -1,3 +1,62 @@
 .container {
-  /**/
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  font-size: 2.3rem;
+}
+
+.billInfo {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.billBlock {
+  background-color: #2c304c;
+  color: #fbfbfb;
+  padding: 0.5rem 1.3rem;
+  border-radius: 1.6rem;
+  font-weight: 300;
+  flex-basis: 50%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.calcResults {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.totalBlock {
+  background-color: #7db146;
+  color: #fbfbfb;
+  padding: 0.5rem 1.3rem;
+  border-radius: 1.6rem;
+  font-weight: 300;
+  flex-basis: 90%;
+  display: flex;
+  justify-content: space-between;
+
+  transition: all 500ms;
+}
+
+.divideIsOpen {
+  flex-basis: 40%;
+}
+
+.divideInput {
+  display: flex;
+
+  align-items: center;
+}
+
+.divideInput > span {
+  font-size: 1.2rem;
+  margin-left: 1rem;
 }

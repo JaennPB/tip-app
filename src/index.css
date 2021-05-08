@@ -50,11 +50,3 @@ ul[class],
 ol[class] {
   list-style: none;
 }
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}

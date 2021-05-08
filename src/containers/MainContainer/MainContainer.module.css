@@ -1,4 +1,55 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
 .controls {
   display: flex;
   justify-content: space-between;
+}
+
+label {
+  display: block;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+input {
+  font: inherit;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 1px solid #8f98a5;
+  border-radius: 2rem;
+  width: 100%;
+}
+
+.billControls {
+  width: 50%;
+}
+
+.buttonControls > button {
+  margin-right: 1rem;
+}
+
+.customTipControls {
+  animation: appear 500ms ease-in-out;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

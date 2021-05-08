@@ -14,13 +14,21 @@ const AppContainer = (props) => {
     setShowCustomTipInput(true);
   };
 
-  let customSection = null;
+  let tipSection = (
+    <div className={styles.buttonControls}>
+      <label>Tip:</label>
+      <Button isTipButton>10%</Button>
+      <Button isTipButton>15%</Button>
+      <Button isTipButton>20%</Button>
+      <Button clicked={showCustomTipHandler}>Custom</Button>
+    </div>
+  );
   if (showCustomTipInput) {
-    customSection = (
-      <>
+    tipSection = (
+      <div className={styles.customTipControls}>
         <label>Tip:</label>
-        <input />
-      </>
+        <input type="number" />
+      </div>
     );
   }
 
@@ -32,18 +40,12 @@ const AppContainer = (props) => {
     <div className={styles.container}>
       <form>
         <div className={styles.controls}>
-          <div>
+          <div className={styles.billControls}>
             <label>Your Bill:</label>
-            <input />
+            <input type="number" />
           </div>
-          <div>
-            <p>Tip:</p>
-            {showCustomTipInput || <Button isTipButton>10%</Button>}
-            {showCustomTipInput || <Button isTipButton>15%</Button>}
-            {showCustomTipInput || <Button isTipButton>20%</Button>}
-            <Button clicked={showCustomTipHandler}>Custom</Button>
-            {showCustomTipInput && customSection}
-          </div>
+          {!showCustomTipInput && tipSection}
+          {showCustomTipInput && tipSection}
         </div>
       </form>
       <Button isActionButton clicked={calculateHandler}>

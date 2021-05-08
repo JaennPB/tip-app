@@ -1,16 +1,28 @@
+/* FIXME: fix classes and add hover effect */
+
 .button {
-  background-color: #7190a6;
-  border: none;
-  padding: 0.5rem 1.5rem;
-  border-radius: 1.5rem;
-  color: #f6e7e6;
-  font-size: 1.3rem;
+  background-color: transparent;
+  border: 2px solid #8f98a5;
+  padding: 0.5rem 1.3rem;
+  border-radius: 1.6rem;
+  color: #8f98a5;
+  font-weight: 300;
+  font: inherit;
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 .tipButton {
-  background-color: #334167;
+  background-color: #2c304c;
+  border: none;
+  color: #fbfbfb;
 }
 
 .actionButton {
-  background-color: #49b066;
+  background-color: transparent;
+  border: 2px solid #7db146;
+  color: #7db146;
+  font-size: 2.3rem;
+  border-radius: 3rem;
+  padding: 0.6rem 1.6rem;
 }

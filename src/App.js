@@ -24,9 +24,11 @@ function App() {
     <div className="app">
       <Card>
         <Title />
-        <Button isActionButton clicked={openTipCalculatorHandler}>
-          Begin
-        </Button>
+        {openTipApp || (
+          <Button isActionButton clicked={openTipCalculatorHandler}>
+            Begin
+          </Button>
+        )}
       </Card>
       {openTipApp && (
         <Card>

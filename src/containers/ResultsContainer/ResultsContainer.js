@@ -14,21 +14,34 @@ const ResultsContainer = (props) => {
   let divideSection = null;
   if (showDivideInput) {
     divideSection = (
-      <>
-        <label>Number of people</label>
-        <input type="number" />
-        <p>Per person: $9.33</p>
-      </>
+      <div className={styles.divideInput}>
+        <input type="number" placeholder="Number of people" />
+        <span>Per person: $9.33</span>
+      </div>
     );
   }
 
   return (
     <div className={styles.container}>
-      <div>Bill: $100</div>
-      <div>Your Tip: 10%</div>
-      <div>Total with Tip: $110</div>
-      <div className={styles.divideControls}>
-        <Button clicked={showDivideSectionHandler}>Divide</Button>
+      <div className={styles.billInfo}>
+        <p className={styles.billBlock}>
+          Bill: <span>$100</span>
+        </p>
+        <p className={styles.billBlock}>
+          Your Tip: <span>$10 (10%)</span>
+        </p>
+      </div>
+      <div className={styles.calcResults}>
+        <p
+          className={`${styles.totalBlock} ${
+            showDivideInput && styles.divideIsOpen
+          }`}
+        >
+          Total with Tip: <span>$110</span>
+        </p>
+        {showDivideInput || (
+          <Button clicked={showDivideSectionHandler}>Divide</Button>
+        )}
         {showDivideInput && divideSection}
       </div>
     </div>
